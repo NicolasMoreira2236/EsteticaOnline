@@ -44,7 +44,7 @@ function AgregarCarro(id) {
         .then((data) => {
             let producto = data.find(elemento => elemento.id == id);
             producto.cantidad = 1;
-            let encontrado = productos_carro.findIndex(elemento => elemento.id == data.id);
+            let encontrado = productos_carro.findIndex(elemento => elemento.id == producto.id);
             if (encontrado === -1) {
                 productos_carro.push(producto);
                 mensaje();
