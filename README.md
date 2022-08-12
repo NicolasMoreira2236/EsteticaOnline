@@ -1,3 +1,1 @@
-# EsteticaSol
-# EsteticaOnline
 # EsteticaOnline
