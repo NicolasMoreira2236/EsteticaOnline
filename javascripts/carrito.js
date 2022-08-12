@@ -23,7 +23,7 @@ function renderizarProductosCarro() {
         <td class="text-end"><b>$${precio}</b></td>
         <td class="text-center bg-opacity-10">
         <a href="#" class="btn btn-danger bg-danger  text-white bg-opacity-50 rounded" onclick="EliminarCarro(${producto.id})">
-        <img src="IMAGES/recycle-bin.png" width="24"><b>Quitar Producto</b></a></td></tr>`
+        <img src="./IMAGES/recycle-bin.png" width="24"><b>Quitar Producto</b></a></td></tr>`
 
             total += precio;
         }
