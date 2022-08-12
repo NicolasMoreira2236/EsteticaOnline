@@ -18,7 +18,7 @@ function renderizarProductosCarro() {
             let precio = producto.cantidad * producto.precio;
             contenido += `<tr>
         <td class="text-end">
-        <img src="IMAGES/${producto.imagen}" alt="${producto.nombre}" class="bg-danger p-1 text-dark bg-opacity-10 rounded" width="100"></td>
+        <img src="./IMAGES/${producto.imagen}" alt="${producto.nombre}" class="bg-danger p-1 text-dark bg-opacity-10 rounded" width="100"></td>
         <td class="text-center px-2"><b>${producto.nombre}. x ${producto.cantidad}</b></td>
         <td class="text-end"><b>$${precio}</b></td>
         <td class="text-center bg-opacity-10">
