@@ -40,25 +40,25 @@ function mensaje() {
 function AgregarCarro(id) {
     let productos_carro = LSrecibirCarro();
     fetch(`../main.json`)
-    .then ((res)=> res.json())
-    .then((data)=>{
-       let producto = data.find(elemento => elemento.id == id);
-       producto.cantidad = 1;
-       let encontrado = productos_carro.findIndex(elemento => elemento.id == data.id);
-          if (encontrado === -1){
-            productos_carro.push(producto);
-           mensaje();
-            LSguardarCarro(productos_carro);
-            btnCarritoRefresh();
-       }else {
-            productos_carro[encontrado].cantidad++;
-             mensaje()
-            LSguardarCarro(productos_carro);
-            btnCarritoRefresh();
+        .then((res) => res.json())
+        .then((data) => {
+            let producto = data.find(elemento => elemento.id == id);
+            producto.cantidad = 1;
+            let encontrado = productos_carro.findIndex(elemento => elemento.id == data.id);
+            if (encontrado === -1) {
+                productos_carro.push(producto);
+                mensaje();
+                LSguardarCarro(productos_carro);
+                btnCarritoRefresh();
+            } else {
+                productos_carro[encontrado].cantidad++;
+                mensaje()
+                LSguardarCarro(productos_carro);
+                btnCarritoRefresh();
 
-          }
-     
-      });
+            }
+
+        });
 
 }
 
